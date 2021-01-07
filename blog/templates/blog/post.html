@@ -6,7 +6,7 @@
 
       <div class="article-metadata">
         <img class="article-img rounded-circle " src="{{post.author.profile.image.url}}">
-        <a class="mr-2" href="{% url 'userposts'post.author %}">{{ post.author }}</a>
+        <a class="mr-2" href="{% url 'userposts' post.author %}">{{ post.author }}</a>
         <small class="text-muted">{{ post.date_posted|date:"d F Y" }}</small>
         {% if post.author == user %}
           <a href="{% url 'postupdate' post.id %}">Update</a>
